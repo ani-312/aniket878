@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Krishna Academy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Login Form -->
+  <div class="container" id="loginPage">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <select id="role" required>
+        <option value="">Select Role</option>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+      </select>
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p class="toggle" onclick="showSignup()">New user? Sign up</p>
+    </form>
+  </div>
+
+  <!-- Signup Form -->
+  <div class="container" id="signupPage" style="display: none;">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <select id="signupRole" required>
+        <option value="">Select Role</option>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+      </select>
+      <input type="text" id="signupUsername" placeholder="Username" required />
+      <input type="password" id="signupPassword" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+      <p class="toggle" onclick="showLogin()">Already have an account? Login</p>
+    </form>
+  </div>
+
+  <!-- Main Content -->
+  <div id="mainContent" style="display: none;">
+    <header>
+      <h1>Krishna Academy</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#attendance">Attendance</a></li>
+          <li><a href="#tests">Tests</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <h2>Welcome to Krishna Academy</h2>
+      <p>Empowering students from class 6 to 12 with quality education and resources.</p>
+    </section>
+
+    <section id="classes">
+      <h2>Select Your Class</h2>
+      <div class="class-grid">
+        <button onclick="goToClass(6)">Class 6</button>
+        <button onclick="goToClass(7)">Class 7</button>
+        <button onclick="goToClass(8)">Class 8</button>
+        <button onclick="goToClass(9)">Class 9</button>
+        <button onclick="goToClass(10)">Class 10</button>
+        <button onclick="goToClass(11)">Class 11</button>
+        <button onclick="goToClass(12)">Class 12</button>
+      </div>
+    </section>
+
+    <section id="attendance">
+      <h2>Attendance</h2>
+      <p>Feature coming soon: Students can mark attendance, teachers can review it.</p>
+    </section>
+
+    <section id="tests">
+      <h2>Tests</h2>
+      <p>Feature coming soon: Students can take tests, and results will be available.</p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>We provide quality content to students of classes 6 to 12 including notes, videos, tests, and more.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: support@krishnaacademy.com</p>
+      <p>Phone: +91-8709647934</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Krishna Academy. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
